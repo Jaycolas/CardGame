@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8q8-6M-mvs">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Set Card-->
+        <scene sceneID="k2N-BU-8bw">
+            <objects>
+                <viewController title="Set Card" id="seY-hK-9rl" customClass="SetCardGameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yaP-it-lTj"/>
+                        <viewControllerLayoutGuide type="bottom" id="ML5-0Q-L2G"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KbJ-Uz-Ne0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBu-cc-lhQ">
+                                <rect key="frame" x="16" y="450" width="50" height="30"/>
+                                <state key="normal" title="ReDeal">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetGame:" destination="seY-hK-9rl" eventType="touchUpInside" id="g6b-HU-kgn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3eM-Rb-e5P">
+                                <rect key="frame" x="210" y="454" width="94" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="NaM-87-VHE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.15294118225574493" green="0.74117648601531982" blue="0.78431379795074463" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="ML5-0Q-L2G" firstAttribute="top" secondItem="3eM-Rb-e5P" secondAttribute="bottom" constant="44" id="3Rd-MB-RFG"/>
+                            <constraint firstItem="OBu-cc-lhQ" firstAttribute="leading" secondItem="KbJ-Uz-Ne0" secondAttribute="leadingMargin" id="c1O-Y6-SRW"/>
+                            <constraint firstItem="3eM-Rb-e5P" firstAttribute="trailing" secondItem="KbJ-Uz-Ne0" secondAttribute="trailingMargin" id="ifa-7m-bT7"/>
+                            <constraint firstItem="OBu-cc-lhQ" firstAttribute="baseline" secondItem="3eM-Rb-e5P" secondAttribute="baseline" id="ksO-oW-Y1g"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="SBr-0C-LMF"/>
+                    <connections>
+                        <outlet property="reDealButton" destination="OBu-cc-lhQ" id="zJu-dI-7So"/>
+                        <outlet property="scoreLabel" destination="3eM-Rb-e5P" id="xsF-4j-QL7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KnZ-pi-6af" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686" y="236"/>
+        </scene>
+        <!--Playing Card-->
+        <scene sceneID="bGR-Ej-18T">
+            <objects>
+                <viewController title="Playing Card" id="0pY-1c-yVh" customClass="PlayingCardGameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="esW-Q2-44Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="dYp-bw-Xpe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vbf-re-Arm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efg-5b-DI2">
+                                <rect key="frame" x="215" y="456" width="89" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="89" id="4ME-k3-AjP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EOx-BD-dAQ">
+                                <rect key="frame" x="16" y="452" width="48" height="30"/>
+                                <state key="normal" title="Redeal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetGame:" destination="0pY-1c-yVh" eventType="touchUpInside" id="OBg-fa-IUo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="Efg-5b-DI2" firstAttribute="trailing" secondItem="vbf-re-Arm" secondAttribute="trailingMargin" id="E1g-qh-QVs"/>
+                            <constraint firstItem="EOx-BD-dAQ" firstAttribute="leading" secondItem="vbf-re-Arm" secondAttribute="leadingMargin" id="MLB-KJ-UcQ"/>
+                            <constraint firstItem="dYp-bw-Xpe" firstAttribute="top" secondItem="Efg-5b-DI2" secondAttribute="bottom" constant="42" id="OOs-nN-fDx"/>
+                            <constraint firstItem="Efg-5b-DI2" firstAttribute="baseline" secondItem="EOx-BD-dAQ" secondAttribute="baseline" id="cIa-fq-17M"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="jVh-Up-BSp"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="reDealButton" destination="EOx-BD-dAQ" id="gkb-qI-svx"/>
+                        <outlet property="scoreLabel" destination="Efg-5b-DI2" id="tUe-fd-C7x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uce-DG-CyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="686" y="-426"/>
+        </scene>
+        <!--CardGame-->
+        <scene sceneID="eW4-io-Wvs">
+            <objects>
+                <tabBarController title="CardGame" id="8q8-6M-mvs" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Agd-XS-cbl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0pY-1c-yVh" kind="relationship" relationship="viewControllers" id="5a8-pM-Shx"/>
+                        <segue destination="seY-hK-9rl" kind="relationship" relationship="viewControllers" id="jAl-Uk-fN8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5ud-ww-pw1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-134" y="-94"/>
+        </scene>
+    </scenes>
+</document>
